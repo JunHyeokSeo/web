@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<!--
+1. window 객체는 브라우저 관련 최상위 내장객체로서 보통은 생략한다.
+2. 문자를 출력할 때 쌍따옴표와 외따옴표를 모두 사용할 수 있다.
+3. 문장의 끝에는 세미콜론을 생략할 수 있다
+-->
+<script>
+	// window.alert('출력 성공')
+</script>
+<script>
+	<!-- 줄바꿈 없음. 별도의 줄바꿈 태그를 사용해야함-->
+	// document.write("처음 작성하는 자바스크립트1");
+    // document.write("처음 작성하는 자바스크립트2");
+    // document.write("처음 작성하는 자바스크립트3");
+
+	// window 객체는 생략 가능하다.
+    // window.document.write("처음 작성하는 자바스크립트1<br>");
+    // window.document.write("처음 작성하는 자바스크립트2" + '<br>');
+    // window.document.write("처음 작성하는 자바스크립트3");
+
+    // 오류 발생. Script 내부에서는 html 태그 사용 불가능. write 메소드 내부에 사용.
+    // document.write("처음 작성하는 자바스크립트1"); <br>
+
+	// 줄바꿈(별도의 html 태그 사용). writeln 메소드도 있지만 줄바꿈 되지 않음.
+    // document.write("처음 작성하는 자바스크립트1<br>");
+    // document.write("처음 작성하는 자바스크립트2" + '<br>');
+    // document.write("처음 작성하는 자바스크립트3");
+
+	// 세미콜론 사용하지 않아도 괜찮음
+    // document.write("처음 작성하는 자바스크립트1<br>")
+</script>
+
+<!--script 사용 방법-->
+<script></script>
+<script type="text/javascript"> </script>
+<script language="JavaScript"></script>
+
+<script>
+	//단일행 주석
+	// document.write("test")
+</script>
+
+<script>
+    /*다중행 주석*/
+    /*
+    document.write("test")
+    document.write("test")
+    */
+</script>
+
+<!--콘솔에 출력-->
+<script>
+	console.log('콘솔에 출력됨');
+</script>
+
+</body>
+</html>

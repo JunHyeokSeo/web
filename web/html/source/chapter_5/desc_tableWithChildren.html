@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic</title>
+	<!--
+	table > tbody > tr > th 순서
+	tbody가 내부적으로 자동 생성된다.
+	눈에 보이지 않는 Tag가 있기 때문에 적용이 되지 않는다
+	-->
+    <style>
+        table > tr > th {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+			<!--자손 선택자 : 동일한 위치에 있는 태그여도 최상단의 하나만 적용이 된다-->
+            <th>이름</th>
+            <th>지역</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울특별시 강서구 내발산동</td>
+        </tr>
+    </table>
+</body>
+</html>
