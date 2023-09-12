@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Report</title>
+</head>
+<body>
+<script>
+    var arr = new Array();
+	function check(num) {
+        for (let i = 0; i < arr.length; i++) {
+	        if (arr[i] == num) return 0;
+        }
+        return 1;
+    }
+
+    function print() {
+        arr.sort();
+        for (let i = 0; i < arr.length; i++) {
+	        document.write(arr[i] + '\t');
+        }
+    }
+
+    while (arr.length < 6) {
+        let num = Math.ceil(Math.random() * 45);
+        if (check(num)) {
+            arr.push(num);
+        }
+    }
+    document.write('난수 출력' + '<br><br>')
+    print();
+</script>
+</body>
+</html>

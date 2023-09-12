@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date 객체</title>
+	<script>
+        var c = ['blue', 'pink', 'green', 'gray', 'skyblue', 'black'];
+
+        function change() {
+			var t = new Date();
+            var s = t.getSeconds();
+            var n = s % 6;
+			document.bgColor = c[n];
+            w = setTimeout('change()', 1000);
+        }
+
+        function stop() {
+			clearTimeout(w);
+            document.bgColor='white';
+        }
+	</script>
+</head>
+<body>
+<h3>화면색이 바뀌네요</h3>
+<input type="button" value="배경색 변경" onclick="change()">
+<input type="button" value="중지" onclick="stop()">
+</body>
+</html>

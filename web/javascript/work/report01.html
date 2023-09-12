@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>구구단 출력 과제</title>
+	<script>
+        function mul(i){
+            var j = 0;
+            while (j++ < 9){
+                document.write(i + ' * ' + j + ' = ' + i * j + '<br>');
+            }
+            document.write('<br>')
+        }
+	</script>
+</head>
+<body>
+<table border="1" align="center">
+	<caption>구구단</caption>
+	<tr>
+	<script>
+        var i = 1;
+        while (i++ < 9) {
+            document.write('<td>' + i + '단</td>');
+        }
+        document.write('</tr><tr>')
+        var i = 1;
+        while (i++ < 9) {
+            document.write('<td>')
+            mul(i);
+            document.write('</td>')
+        }
+	</script>
+	</tr>
+</table>
+
+</body>
+</html>
