@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>focus, blur 이벤트</title>
+	<!--함수 내부에 getElement 메소드를 작성하면 Script 위치와 관계없이 정상 동작-->
+	<script>
+        function id_focus() {       //focus event
+            let id = document.getElementById('id');
+            id.value = '';
+        }
+
+        function id_blur() {        //blur event
+            let id = document.getElementById('id');
+            id.value = id.defaultValue;
+        }
+
+        function pw_focus() {
+            let pass = document.getElementById('pass');
+            pass.value = '';
+        }
+
+        function pw_blur() {
+            let pass = document.getElementById('pass');
+            pass.value = pass.defaultValue;
+        }
+	</script>
+</head>
+<body>
+<form id="myform" method="post" action="send.jsp">
+	ID : <input type="text" id="id" value="Input ID" onfocus="id_focus()" onblur="id_blur()"><br>
+	PW : <input type="text" id="pass" value="Input PW" onfocus="pw_focus()" onblur="pw_blur()"><br>
+</form>
+</body>
+</html>

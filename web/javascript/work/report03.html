@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>계산기</title>
+	<style>
+		table {
+			text-align: center;
+			width: 300px;
+			height: 200px;
+		}
+		#header td input {
+			/*width: px;*/
+		}
+
+		#footer td input{
+			/*width: 150px;*/
+		}
+		input {
+            width: 100%;
+		}
+	</style>
+	<script>
+		function put(input){
+            let val = document.getElementById('display');
+
+            if (input === '=') {
+				val.value = eval(val.value);
+            }
+            else if (input === 'sqrt') {
+                val.value = Math.sqrt(eval(val.value));
+            }
+            else if (input === 'clear') {
+                val.value = '';
+            }
+            else {
+				val.value += input;
+            }
+		}
+	</script>
+</head>
+<body>
+<table border="1" align="center">
+	<tr id="header">
+		<td colspan="4"><input type="text" id="display" name="display"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="7" onclick="put(7)"></td>
+		<td><input type="button" value="8" onclick="put(8)"></td>
+		<td><input type="button" value="9" onclick="put(9)"></td>
+		<td><input type="button" value="/" onclick="put('/')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="4" onclick="put(4)"></td>
+		<td><input type="button" value="5" onclick="put(5)"></td>
+		<td><input type="button" value="6" onclick="put(6)"></td>
+		<td><input type="button" value="*" onclick="put('*')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="1" onclick="put(1)"></td>
+		<td><input type="button" value="2" onclick="put(2)"></td>
+		<td><input type="button" value="3" onclick="put(3)"></td>
+		<td><input type="button" value="-" onclick="put('-')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="0" onclick="put(0)"></td>
+		<td><input type="button" value="." onclick="put('.')"></td>
+		<td><input type="button" value="sqrt" onclick="put('sqrt')"></td>
+		<td><input type="button" value="+" onclick="put('+')"></td>
+	</tr>
+	<tr id="footer">
+		<td colspan="2"><input type="button" value="=" onclick="put('=')"></td>
+		<td colspan="2"><input type="button" value="Clear" onclick="put('clear')"></td>
+	</tr>
+</table>
+</body>
+</html>

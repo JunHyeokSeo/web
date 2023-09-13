@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>focus, blur 이벤트</title>
+</head>
+<body>
+<form id="myform" method="post" action="send.jsp">
+	ID : <input type="text" id="id" value="Input ID" onfocus="id_focus()" onblur="id_blur()"><br>
+	PW : <input type="text" id="pass" value="Input PW" onfocus="pw_focus()" onblur="pw_blur()"><br>
+</form>
+
+<!--위와 같은 방법으로 작성 시, Script가 form 태그 아래에 있어야 함-->
+<script>
+    let id = document.getElementById('id');
+    let pass = document.getElementById('pass');
+
+    function id_focus() {       //focus event
+	    id.value = '';
+    }
+
+    function id_blur() {        //blur event
+        id.value = id.defaultValue;
+    }
+
+    function pw_focus() {
+        pass.value = '';
+    }
+
+    function pw_blur() {
+        pass.value = pass.defaultValue;
+    }
+</script>
+</body>
+</html>

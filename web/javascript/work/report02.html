@@ -15,10 +15,13 @@
     }
 
     function print() {
-        arr.sort();
-        for (let i = 0; i < arr.length; i++) {
-	        document.write(arr[i] + '\t');
-        }
+        arr.sort(function (a, b) {
+            return a - b;
+        });
+        // for (let i = 0; i < arr.length; i++) {
+	    //     document.write(arr[i] + '\t');
+        // }
+	    document.write(arr.toString());
     }
 
     while (arr.length < 6) {

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트</title>
+	<script>
+		window.onload = function (){
+            //id가 header인 태그(element)를 구해온다.
+			var header = document.getElementById('header');
+
+            header.style.color = 'orange';           //글자색
+            header.style.background = 'red';         //배경색
+            header.innerHTML = '자바스크립트';        //h1태그 안의 값 변경
+		}
+	</script>
+</head>
+<body>
+<h1 id="header">Header</h1>
+</body>
+</html>

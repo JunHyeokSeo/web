@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>이벤트</title>
+	<script>
+        window.onload = function () {
+	        // querySelectorAll는 h1 선택자를 모두 구해온다.
+			var headers = document.querySelectorAll('h1');
+
+            for (let i = 0; i < headers.length; i++) {
+	            var header = headers[i];
+
+                header.style.color = 'orange';
+                header.style.background = 'red';
+                header.innerHTML = '자바스크립트';
+            }
+        };
+	</script>
+</head>
+<body>
+	<h1>Header</h1>
+	<h1>Header</h1>
+	<h1>Header</h1>
+</body>
+</html>
