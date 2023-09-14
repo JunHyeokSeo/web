@@ -19,5 +19,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$USER_HOME$/Documents/Dev_util/apache-tomcat-9.0.80/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/Documents/Dev_util/apache-tomcat-9.0.80/lib" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

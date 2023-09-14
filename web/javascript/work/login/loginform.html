@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인 폼</title>
+	<!-- 외부 JS 파일 불러오기 -->
+	<script src="login.js">
+        // function check() {
+        //     let id = document.getElementById('id');
+        //     let passwd = document.getElementById('passwd');
+		//
+        //     if (id.value === '') {
+        //         alert('ID를 입력하세요');
+        //         id.focus();
+        //         return false;
+        //     }
+		//
+        //     if (passwd.value === '') {
+        //         alert('PW를 입력하세요');
+        //         passwd.focus();
+        //         return false;
+        //     }
+        // }
+	</script>
+</head>
+<body>
+	
+<!-- form 태그의 속성
+method : 값을 전달하는 방식을 설정하는 속성 (get or post)	
+action : 값이 전달될 파일명을 설정
+-->		
+	
+<form method="post" action="login.jsp" onsubmit="return check()">
+<table border="1" width="350" align="center">
+	<caption>로그인</caption>
+	<tr>
+		<td>ID</td>
+		<td>
+<!--name은 변수를 의미하며 id는 변수명이다. 사용자의 id 정보를 저장하고 전달하기 위한 역할-->
+<!--id 속성은 각 태그를 구분하기 위한 역할-->
+<!--한 개의 폼 안에 submit 기능은 하나만 구현하면 된다.
+ submit은 form 안의 내용을 일괄 전송하므로 여러개가 있어도 모두 동작이 동일하다-->
+			<input type="text" size="20" maxlength="10" autofocus name="id" id="id">
+		</td>
+	</tr>
+	<tr>
+		<td>비밀번호</td>
+		<td><input type="password" size="20" name="passwd" id="passwd">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<input type="submit" value="로그인""> <!--전송기능이 있는 버튼-->
+			<input type="reset" value="취소">   <!-- 초기화 버튼 -->
+		</td>
+	</tr>
+
+</table>
+</form>	
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>

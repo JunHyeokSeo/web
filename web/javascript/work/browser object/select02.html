@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select 객체</title>
+	<script>
+        function move() {
+            let sal = document.getElementById('sel');
+
+            location.href = sal.value;
+        }
+	</script>
+</head>
+<body>
+방송국 : <select id="sel" onchange="move()">
+	<option value="">방송국 선택</option>
+	<option value="https://www.kbs.co.kr">KBS</option>
+	<option value="https://www.imbc.com">MBC</option>
+	<option value="https://www.sbs.co.kr">SBS</option>
+</select>
+</body>
+</html>

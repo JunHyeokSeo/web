@@ -8,16 +8,30 @@
 			text-align: center;
 			width: 300px;
 			height: 200px;
-		}
-		#header td input {
-			/*width: px;*/
+			background-color: black;
 		}
 
+        #header td, #footer td {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header td input {
+			width: 100%;
+            border-radius: 0;
+	        /*border: none;*/
+		}
 		#footer td input{
-			/*width: 150px;*/
+			width: 130px;
+			border-radius: 0;
 		}
 		input {
-            width: 100%;
+            width: 60px;
+			height: 60px;
+			background-color: #393939;
+			color: #d6d6d6;
+			font-size: 50px;
+			border-radius: 50%;
 		}
 	</style>
 	<script>
@@ -40,7 +54,7 @@
 	</script>
 </head>
 <body>
-<table border="1" align="center">
+<table>
 	<tr id="header">
 		<td colspan="4"><input type="text" id="display" name="display"></td>
 	</tr>
@@ -65,12 +79,12 @@
 	<tr>
 		<td><input type="button" value="0" onclick="put(0)"></td>
 		<td><input type="button" value="." onclick="put('.')"></td>
-		<td><input type="button" value="sqrt" onclick="put('sqrt')"></td>
+		<td><input type="button" value="S" onclick="put('sqrt')"></td>
 		<td><input type="button" value="+" onclick="put('+')"></td>
 	</tr>
 	<tr id="footer">
 		<td colspan="2"><input type="button" value="=" onclick="put('=')"></td>
-		<td colspan="2"><input type="button" value="Clear" onclick="put('clear')"></td>
+		<td colspan="2"><input type="button" value="C" onclick="put('clear')"></td>
 	</tr>
 </table>
 </body>

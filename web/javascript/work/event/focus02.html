@@ -6,13 +6,15 @@
 	<!--함수 내부에 getElement 메소드를 작성하면 Script 위치와 관계없이 정상 동작-->
 	<script>
         function id_focus() {       //focus event
-            let id = document.getElementById('id');
-            id.value = '';
+            // let id = document.getElementById('id');
+            // id.value = '';
+	        document.nameofform.myid.value = '';
         }
 
         function id_blur() {        //blur event
-            let id = document.getElementById('id');
-            id.value = id.defaultValue;
+            // let id = document.getElementById('id');
+            // id.value = id.defaultValue;
+            document.nameofform.myid.value = document.nameofform.myid.defaultValue;
         }
 
         function pw_focus() {
@@ -27,8 +29,8 @@
 	</script>
 </head>
 <body>
-<form id="myform" method="post" action="send.jsp">
-	ID : <input type="text" id="id" value="Input ID" onfocus="id_focus()" onblur="id_blur()"><br>
+<form id="myform" name="nameofform" method="post" action="send.jsp">
+	ID : <input type="text" id="id" name="myid" value="Input ID" onfocus="id_focus()" onblur="id_blur()"><br>
 	PW : <input type="text" id="pass" value="Input PW" onfocus="pw_focus()" onblur="pw_blur()"><br>
 </form>
 </body>
