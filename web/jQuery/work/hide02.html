@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hide02</title>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('div').hide();
+
+            $('#b1').click(function () {    //출력 버튼 클릭
+                $('div').show();
+            });
+
+            $('#b2').click(function () {    //숨김 버튼 클릭
+                $('div').hide();
+            });
+        });
+	</script>
+</head>
+<body>
+	<div id="sample1">지워질 내용</div>
+	태그 밖 내용 <br><br>
+
+	<button type="button" id="b1">출력</button>
+	<button type="button" id="b2">숨김</button>
+</body>
+</html>
