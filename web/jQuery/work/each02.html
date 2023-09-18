@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>each 함수</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function(){
+	let array = [{ name:'naver', link:'http://www.naver.com'},
+				 { name:'kakao', link:'http://www.kakao.com'},
+				 { name:'google', link:'http://www.google.com'},
+				 { name:'apple', link:'http://www.apple.com'},];
+
+    let output = '';
+    $.each(array, function (index, item) {
+        output += '<a href="' + item.link + '">';
+        output += '<h1>' + item.name + '</h1>';
+        output += '</a>';
+    });
+
+    $('div').html(output);
+});		
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hide04</title>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('select').change(function () {
+                let c = $('select').val();
+                if (c === '1') {
+					$('#sel01').show();
+                    $('#sel02').hide();
+                } else {
+                    $('#sel01').hide();
+                    $('#sel02').show();
+                }
+            });
+        });
+	</script>
+</head>
+<body>
+<select>
+	<option value="1">1번</option>
+	<option value="2">2번</option>
+</select>
+<div id="sel01">
+	<input type="text">
+</div>
+<div id="sel02">
+	<textarea rows="10" cols="10"></textarea>
+</div>
+</body>
+</html>

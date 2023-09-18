@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hide03</title>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('p').click(function () {
+				$('p').hide();
+            });
+
+            $('button').click(function () {
+                $('p').show();
+            });
+        });
+	</script>
+</head>
+<body>
+	<p>p 태그 내용</p>
+	<button type="button">출력</button>
+</body>
+</html>
