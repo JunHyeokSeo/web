@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>change01</title>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('#email').change(function () {
+                if ($(this).val() === '') {     //'직접입력' 선택
+                    $('#domain').val('').focus().attr('readOnly', false);   //읽기전용 해제
+                    // $('#domain').val('').focus().removeAttr('readOnly'); //읽기전용 해제
+                } else {    //'도메인' 선택
+                    // $('#domain').val($(this).val()).attr('readOnly', true);
+                    $('#domain').val($(this).val()).attr('readOnly', 'readOnly');
+                }
+            });
+        });
+	</script>
+</head>
+<body>
+E-Mail :
+<input type="text" size="10" id="mainid">@
+<input type="text" size="15" id="domain">
+<select id="email">
+	<option value="">직접입력</option>
+	<option value="naver.com">네이버</option>
+	<option value="daum.net">다음</option>
+	<option value="nate.com">네이트</option>
+	<option value="gmail.com">구글</option>
+</select>
+</body>
+</html>
