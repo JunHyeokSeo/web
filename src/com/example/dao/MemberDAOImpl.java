@@ -1,13 +1,10 @@
 // DAO(Data Access Object)
-package dao;
+package com.example.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
-
-import javax.sql.DataSource;
 
 public class MemberDAOImpl {
 
@@ -48,7 +45,7 @@ public class MemberDAOImpl {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("re : " + re);
 		return re;
 	}
-
 }
