@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax01</title>
+	<style>
+        div {
+            width: 180px;
+            height: 80px;
+            margin: 3px;
+            float: left;
+        }
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('#menu1').click(function () {
+				$.ajax({
+					url: 'data/menu.html',
+					type: 'post',
+                    dataType: 'html',
+                    success: function (data) {
+                        $('#message1').html(data);
+                    }
+				});
+            });
+            $('#menu2').click(function () {
+                $.ajax({
+                    url: 'data/menu.html',
+                    type: 'post',
+                    dataType: 'html',
+                    success: function (data) {
+                        $('#message2').html($(data).find('li'));
+                    }
+                });
+            });
+        });
+	</script>
+</head>
+<body>
+<div>
+	<a href="#" id="menu1">메뉴 보기 1</a><p>
+	<span id="message1"></span>
+</div>
+<div>
+	<a href="#" id="menu2">메뉴 보기 2</a><p>
+	<span id="message2"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>load 01</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('button').click(function () {
+                $('p').load('data/sample1.txt');
+            });
+        });
+	</script>
+</head>
+<body>
+	<button>변경</button>
+	<p>변경 전</p>
+</body>
+</html>

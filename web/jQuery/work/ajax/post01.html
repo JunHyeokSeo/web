@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>post 01</title>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script>
+        $(function () {
+            $('#b1').click(function () {
+                $.post(
+                    //요청할 파일명
+                    'data/welcome.jsp',
+	                //서버로 전달할 키-값 쌍(JSON)
+                    {'username': $('#username').val()},
+	                //전송이 이루어진 후 실행될 콜백함수
+	                //welcome.jsp의 경우, 서버에서 생성한 html 파일이 반환값(msg)의 내용이 된다.
+	                //open 함수를 사용하여 welcome.jsp를 열었을 때 보여지는 페이지의 소스코드.
+                    function (msg) {
+                        alert(msg);
+                        $('#message').html(msg);
+                    }
+                );
+            });
+        });
+	</script>
+</head>
+<body>
+<!--
+비동기 통신에서 form은 생략 가능.
+동기 통신에서는 form을 통해 데이터를 전송하기 때문에 form 필수
+-->
+<form>
+	이름 입력:
+	<input type="text" id="username"><br>
+	<input type="button" id="b1" value="전송">
+</form>
+<div id="message"></div>
+</body>
+</html>
