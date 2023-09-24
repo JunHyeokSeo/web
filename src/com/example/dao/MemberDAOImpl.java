@@ -48,4 +48,9 @@ public class MemberDAOImpl {
 		System.out.println("re : " + re);
 		return re;
 	}
+//	public static void main(String[] args) {
+//		MemberDAOImpl md=new MemberDAOImpl();
+//		String id = "aaaaa";
+//		System.out.println("result : " + md.checkMemberId(id));
+//	}
 }
