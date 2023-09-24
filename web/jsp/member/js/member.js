@@ -124,9 +124,9 @@ function id_check() {
         type: "POST",
         url: "member_idcheck.jsp",
         data: {"memid": memid},
-        success: function (data1) {
-            if (data1 == '1') { 		// 중복 아이디
-                var newtext = '<font color="red">중복 아이디입니다.</font>';
+        success: function (data) {
+            if (data === 1) { 		// 중복 아이디
+                let newtext = '<font color="red">중복 아이디입니다.</font>';
                 $("#idcheck").text('');
                 $("#idcheck").show();
                 $("#idcheck").append(newtext);
@@ -134,7 +134,7 @@ function id_check() {
                 return false;
             }
             else {			// 사용 가능한 ID
-                var newtext = '<font color="blue">사용가능한 아이디입니다.</font>';
+                let newtext = '<font color="blue">사용가능한 아이디입니다.</font>';
                 $("#idcheck").text('');
                 $("#idcheck").show();
                 $("#idcheck").append(newtext);
